@@ -1,2 +1,15 @@
-raw_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/raw/pexels_videos/
+raw_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/raw/flat_db/
+stimulus_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/derived/flat_db
+
 preferred_n_jobs: 40
+
+desired_video_info: ['width', 'height', 'codec_name', 'bit_rate', 'nb_frames','pix_fmt', 'duration', 'r_frame_rate']
+video_duration: 2.5
+ffmpeg_settings:
+    pix_fmt: yuv420p
+    codec: libx264
+    crf: 10
+    preset: veryslow
+    framerate: 30
+    format: mp4
+    size: "1920:1080"
