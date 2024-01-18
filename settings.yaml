@@ -1,7 +1,8 @@
 raw_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/raw/flat_db/
 stimulus_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/derived/flat_db
 
-preferred_n_jobs: 40
+preferred_n_jobs_info: 40
+preferred_n_jobs_transcode: 8
 
 desired_video_info: ['width', 'height', 'codec_name', 'bit_rate', 'nb_frames','pix_fmt', 'duration', 'r_frame_rate']
 video_duration: 2.5
