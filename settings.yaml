@@ -9,8 +9,8 @@ video_duration: 2.5
 ffmpeg_settings:
     pix_fmt: yuv420p
     codec: libx264
-    crf: 10
-    preset: veryslow
-    framerate: 30
+    crf: 16
+    preset: slow
+    framerate: 24
     format: mp4
     size: "1920:1080"
