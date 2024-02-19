@@ -1,6 +1,7 @@
 raw_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/raw/flat_db
 cut_stimulus_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/cut
-rescaled_stimulus_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/rescaled
+rescaled_stimulus_video_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/rescaled_final
+pictures_directory: /tank/shared/2022/arrow_of_time/derivatives/stimuli/pictures
 
 raw_video_directory_local: /Users/shufanzhang/Desktop/new_videos/flat_db
 cut_stimulus_video_directory_local: /Users/shufanzhang/Desktop/new_videos/cut
