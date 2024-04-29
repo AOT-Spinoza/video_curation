@@ -67,8 +67,9 @@ def cut_clips(video_path, clip_durations, output_dir,suffix="clip"):
     os.system("module load FFmpeg/6.0-GCCcore-12.3.0")
     for i, (start, end) in enumerate(clip_durations):
         output_path = output_dir / f"{video_path.stem}_{suffix}_{i}.mp4"
-        #os.makedirs(output_path.parent, exist_ok=True)
-        os.system(f"ffmpeg -i {video_path} -ss {start} -to {end} -c copy {output_path}")
+        #os.system(f"ffmpeg -i {video_path} -ss {start} -to {end} -c copy {output_path}")
+        #do the same thing but keep the sound!
+        os.system(f"ffmpeg -i {video_path} -ss {start} -to {end} -c copy -map 0:v -map 0:a {output_path}")
 
 def cut_all():
     for i, video in enumerate(video_list):

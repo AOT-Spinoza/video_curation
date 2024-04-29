@@ -157,8 +157,8 @@ def run_clips_to_final_video(run_clips, run_index):
     
     command = "ffmpeg" + input_files_str + " -filter_complex '"
     for i in range(len(input_files)):
-        command += "["+str(i)+":v:0]"
-    command += "concat=n=" + str(len(input_files)) + ":v=1:a=0[outv]' -map '[outv]' " + str(run_file_path)
+        command += "["+str(i)+":v:0]["+str(i)+":a:0]"
+    command += "concat=n=" + str(len(input_files)) + ":v=1:a=1[outv][outa]' -map '[outv]' -map '[outa]' " + str(run_file_path)
     print(command)
     os.system(command)
 
