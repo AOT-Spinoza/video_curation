@@ -13,6 +13,9 @@ original_dir = Path(
 )
 cut_dir = Path("/tank/shared/2024/visual/AOT/derivatives/stimuli/HCPmovies/short_clips")
 
+if not cut_dir.exists():
+    cut_dir.mkdir(parents=True)
+
 video_list = [
     "7T_MOVIE1_CC1.mp4",
     "7T_MOVIE3_CC2.mp4",
@@ -35,7 +38,9 @@ def cut_video_into_short_clips(video, output_dir, gap=1, duration=2.5):
     print(video_duration)
     for i in range(int(video_duration // gap)):
         start = i * gap
-        output_path = output_dir / f"{video}_{i}.mp4"
+        # zfill the index to 4 digits
+
+        output_path = output_dir / f"{video}_{i:04d}.mp4"
         ffmpeg.input(str(video_path), ss=start, t=duration).output(
             str(output_path), loglevel="quiet"
         ).run()
