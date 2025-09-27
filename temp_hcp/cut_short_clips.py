@@ -11,7 +11,7 @@ import os
 original_dir = Path(
     "/tank/shared/2024/visual/AOT/derivatives/stimuli/HCPmovies/originals"
 )
-cut_dir = Path("/tank/shared/2024/visual/AOT/derivatives/stimuli/HCPmovies/short_clips_10s")
+cut_dir = Path("/tank/shared/2024/visual/AOT/derivatives/stimuli/HCPmovies/short_clips_20s")
 
 
 if not cut_dir.exists():
@@ -30,7 +30,7 @@ for video in video_list:
     cut_dir_video.mkdir(parents=True, exist_ok=True)
 
 
-def cut_video_into_short_clips(video, output_dir, gap=1, duration=10):
+def cut_video_into_short_clips(video, output_dir, gap=1, duration=20):
     # cut video into short clips, the gap between the start of each clip is gap, the duration of each clip is duration, there is overlap between clips
     video_path = original_dir / video
     probe = ffmpeg.probe(str(video_path))
